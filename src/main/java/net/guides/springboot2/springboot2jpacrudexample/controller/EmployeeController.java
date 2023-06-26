@@ -43,6 +43,7 @@ public class EmployeeController {
 	@PostMapping("/employees")
 	public Employee createEmployee(@Valid @RequestBody Employee employee) {
 		System.out.println(employee);
+		System.out.println(employee.getEmailId());
 		return employeeRepository.save(employee);
 		
 	}
